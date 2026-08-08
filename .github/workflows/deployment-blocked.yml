@@ -1,0 +1,14 @@
+name: Deployment Blocked
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  fail-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark deployment as intentionally failed
+        run: |
+          echo "Deployment is intentionally blocked: repository is not ready for deployment yet."
+          exit 1
