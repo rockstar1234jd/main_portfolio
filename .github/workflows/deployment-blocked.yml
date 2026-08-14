@@ -10,7 +10,6 @@ jobs:
   fail-deployment:
     runs-on: ubuntu-latest
     steps:
-      - name: Mark deployment as intentionally failed
+      - name: Report deployment status
         run: |
-          echo "Deployment is intentionally blocked: repository is not ready for deployment yet."
-          exit 1
+          echo "Deployment is currently blocked: repository is not ready for deployment yet."
